@@ -163,6 +163,9 @@ public class ClientAdmin {
 
             response.setCmd(cmd);
             String robot = request.getRobot();
+            if(robot.equals("onerpc")) {
+                System.out.println("test");
+            }
             if ( robot != null && this.serverProperties.getRobotWhitelist().contains(robot) ) {
                 if ( httpSessionState.getRobotName() != robot ) {
                     // disconnect previous robot

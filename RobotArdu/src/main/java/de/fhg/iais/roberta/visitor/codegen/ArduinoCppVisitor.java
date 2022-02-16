@@ -96,7 +96,9 @@ public class ArduinoCppVisitor extends AbstractCommonArduinoCppVisitor implement
     @SuppressWarnings("unchecked")
     @Override
     public Void visitLightAction(LightAction<Void> lightAction) {
+        System.out.println("Test1");
         if ( !lightAction.getMode().toString().equals(BlocklyConstants.DEFAULT) ) {
+            System.out.println("Test2");
             this.sb.append("digitalWrite(_led_" + lightAction.getPort() + ", " + lightAction.getMode().getValues()[0] + ");");
         } else {
             Map<String, Object> channels = new LinkedHashMap<>();
@@ -606,7 +608,7 @@ public class ArduinoCppVisitor extends AbstractCommonArduinoCppVisitor implement
         super.generateProgramPrefix(withWrapping);
     }
 
-    private void generateConfigurationSetup() {
+    private void  generateConfigurationSetup() {
         for ( ConfigurationComponent usedConfigurationBlock : this.configuration.getConfigurationComponentsValues() ) {
             switch ( usedConfigurationBlock.getComponentType() ) {
                 case SC.ROBOT:

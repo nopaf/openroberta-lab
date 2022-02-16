@@ -68,6 +68,7 @@ public class BlocklyDropdownFactory {
     public String getConfigurationComponentTypeByBlocklyName(String blocklyName) {
         Assert.nonEmptyString(blocklyName, "Invalid blockly name");
         String configurationComponentType = this.configurationComponentTypes.get(blocklyName);
+        // this.configurationComponentTypes.forEach((k, v) ->  System.out.println("k = " + k + ", v = " + v));  
         Assert.notNull(configurationComponentType, "No associated component type for %s in the properties", blocklyName);
         return configurationComponentType;
     }

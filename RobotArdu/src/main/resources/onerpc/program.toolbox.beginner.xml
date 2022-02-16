@@ -1,0 +1,135 @@
+<toolbox_set id="toolbox" style="display: none">
+    <category name="TOOLBOX_ACTION" svg="false">
+        <block type="robActions_serial_print">
+            <value name="OUT">
+                <block type="text">
+                    <field name="TEXT">Hallo aus eclipse!</field>
+                </block>
+            </value>
+        </block>
+        <block type="robActions_brickLight_on" />
+<block type="robActions_motorDiff_on_for">
+            <value name="POWER">
+                <block type="math_number">
+                    <field name="NUM">30</field>
+                </block>
+            </value>
+            <value name="DISTANCE">
+                <block type="math_number">
+                    <field name="NUM">500</field>
+                </block>
+            </value>
+        </block>
+        <block type="robActions_motorDiff_on">
+            <value name="POWER">
+                <block type="math_number">
+                    <field name="NUM">30</field>
+                </block>
+            </value>
+        </block>
+        <block type="robActions_motorDiff_stop" />
+        <block type="robActions_motorDiff_turn_for">
+            <value name="POWER">
+                <block type="math_number">
+                    <field name="NUM">30</field>
+                </block>
+            </value>
+            <value name="DEGREE">
+                <block type="math_number">
+                    <field name="NUM">500</field>
+                </block>
+            </value>
+        </block>
+        <block type="robActions_motorDiff_turn">
+            <value name="POWER">
+                <block type="math_number">
+                    <field name="NUM">30</field>
+                </block>
+            </value>
+        </block>
+        <block type="robActions_motorDiff_curve_for">
+            <value name="POWER_LEFT">
+                <block type="math_number">
+                    <field name="NUM">30</field>
+                </block>
+            </value>
+            <value name="POWER_RIGHT">
+                <block type="math_number">
+                    <field name="NUM">50</field>
+                </block>
+            </value>
+            <value name="DISTANCE">
+                <block type="math_number">
+                    <field name="NUM">500</field>
+                </block>
+            </value>
+        </block>
+        <block type="robActions_motorDiff_curve">
+            <value name="POWER_LEFT">
+                <block type="math_number">
+                    <field name="NUM">30</field>
+                </block>
+            </value>
+            <value name="POWER_RIGHT">
+                <block type="math_number">
+                    <field name="NUM">50</field>
+                </block>
+            </value>
+        </block>
+        <!-- <block type="robActions_led_on" />
+        <block type="robActions_led_off" /> -->
+    </category>
+    <category name="TOOLBOX_SENSOR" svg="true">
+        <!-- <block type="robSensors_timer_getSample" />
+        <block type="robSensors_timer_reset" /> -->
+    </category>
+    <category name="TOOLBOX_CONTROL" svg="true">
+        <!-- <block type="robControls_if" />
+        <block type="robControls_ifElse" />
+        <block type="robControls_loopForever" />
+        <block type="controls_repeat_ext">
+            <value name="TIMES">
+                <block type="math_number">
+                    <field name="NUM">10</field>
+                </block>
+            </value>
+        </block> -->
+        <block type="robControls_wait_time">
+            <value name="WAIT">
+                <block type="math_number">
+                    <field name="NUM">500</field>
+                </block>
+            </value>
+        </block>
+        <!-- <block type="robControls_wait_for">
+            <value name="WAIT0">
+                <block type="logic_compare">
+                    <field name="OP">GT</field>
+                    <value name="A">
+                        <block type="robSensors_getSample">
+                        </block>
+                    </value>
+                    <value name="B">
+                        <block type="math_number">
+                            <field name="NUM">500</field>
+                        </block>
+                    </value>
+                </block>
+            </value>
+        </block> -->
+    </category>
+    <category name="TOOLBOX_LOGIC" svg="false">
+        <block type="logic_compare" />
+        <block type="logic_operation" />
+        <block type="logic_boolean" />
+    </category>
+    <category name="TOOLBOX_MATH" svg="false">
+        <block type="math_number" />
+        <block type="math_arithmetic" />
+    </category>
+    <category name="TOOLBOX_TEXT" svg="false">
+        <block type="text" />
+        <block type="text_comment" />
+    </category>
+    <category name="TOOLBOX_VARIABLE" custom="VARIABLE" svg="false" />
+</toolbox_set>

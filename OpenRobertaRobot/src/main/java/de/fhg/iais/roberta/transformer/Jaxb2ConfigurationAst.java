@@ -105,7 +105,14 @@ public final class Jaxb2ConfigurationAst {
     public static ConfigurationAst blocks2NewConfig(BlockSet set, BlocklyDropdownFactory factory) {
         List<Instance> instances = set.getInstance();
         List<ConfigurationComponent> allComponents = new ArrayList<>();
-        for ( Instance instance : instances ) {
+        System.out.println("instances.size() = " + instances.size());
+        for(Instance instance : instances) {
+            instance.getBlock().forEach(e -> {
+                System.out.println("e = " + e.getType());      
+            });
+
+        }
+        for ( Instance instance : instances ) {    
             allComponents.add(Jaxb2ConfigurationAst.instance2NewConfigComp(instance, factory));
         }
 
@@ -121,6 +128,7 @@ public final class Jaxb2ConfigurationAst {
     @SuppressWarnings("unchecked")
     private static ConfigurationComponent instance2NewConfigComp(Instance instance, BlocklyDropdownFactory factory) {
         Block firstBlock = instance.getBlock().get(0);
+        System.out.println("error = " + firstBlock.toString());
         String componentType = factory.getConfigurationComponentTypeByBlocklyName(firstBlock.getType());
         String userDefinedName = firstBlock.getField().get(0).getValue();
         Map<String, String> map = new LinkedHashMap<>();

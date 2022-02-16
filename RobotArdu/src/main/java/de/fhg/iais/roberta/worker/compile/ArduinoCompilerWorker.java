@@ -92,6 +92,12 @@ public class ArduinoCompilerWorker implements IWorker {
                 scriptName = compilerResourcesDir + "arduino-resources/build_project_festobionic.sh";
                 arduinoArch = "esp32";
                 break;
+            case "onerpc":
+                boardVariant = "esp32";
+                arduinoVariant = "ARDUINO_ESP32_DEV";
+                scriptName = compilerResourcesDir + "arduino-resources/build_project_onerpc.sh";
+                arduinoArch = "esp32";
+                break;
             case "nano33ble":
                 boardVariant = "nano_33_iot";
                 arduinoVariant = "ARDUINO_ARDUINO_NANO33BLE";

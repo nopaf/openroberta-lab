@@ -81,6 +81,7 @@ public class RobotDownloadProgram {
                     filePath = this.pathToCrosscompilerBaseDir + token + "/" + programName + "/target";
                     break;
                 case "festobionic":
+                case "onerpc":
                     fileName = programName + ".zip";
                     filePath = this.pathToCrosscompilerBaseDir + token + "/" + programName + "/target";
                     break;

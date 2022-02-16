@@ -169,6 +169,7 @@ public final class FestobionicCppVisitor extends AbstractCommonArduinoCppVisitor
 
     private void generateConfigurationVariables() {
         for ( ConfigurationComponent cc : this.configuration.getConfigurationComponentsValues() ) {
+            System.out.println("cc festo = " + cc.getComponentType());
             String blockName = cc.getUserDefinedPortName();
             switch ( cc.getComponentType() ) {
                 case SC.LED:

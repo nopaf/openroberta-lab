@@ -465,9 +465,9 @@ public final class Project {
                                 blockSet = JaxbHelper.xml2BlockSet(this.project.robotFactory.getConfigurationDefault());
                             }
                         }
-                        confAst = Jaxb2ConfigurationAst.blocks2NewConfig(blockSet, this.project.robotFactory.getBlocklyDropdownFactory());
+                        confAst = Jaxb2ConfigurationAst.blocks2NewConfig(blockSet, this.project.robotFactory.getBlocklyDropdownFactory()); // nur onerpc
                     } else { // old configuration
-                        String sensorPrefix = this.project.robotFactory.optSensorPrefix();
+                        String sensorPrefix = this.project.robotFactory.optSensorPrefix(); //mbot, because old config type
                         if ( topBlock == null || sensorPrefix == null ) {
                             throw new DbcException("A top block and a sensor prefix are required for an old configuration!");
                         }

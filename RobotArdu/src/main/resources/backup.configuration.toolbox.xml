@@ -1,0 +1,5 @@
+<toolbox_set id="toolbox" style="display: none">
+    <category name="TOOLBOX_ACTION" svg="false">
+        <block type="robConf_led" />
+    </category>
+</toolbox_set>
